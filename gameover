@@ -1,0 +1,26 @@
+using UnityEngine;
+using System.Collections;
+
+public class gameover : MonoBehaviour 
+{
+	// if the gameobject touch the other objec. The game will end
+	void Start () 
+	{
+		
+	}
+	
+	// Update is called once per frame
+	void Update () 
+	{
+		
+	}
+	
+	void OnCollisionEnter2D (Collision2D collision)
+	{
+		
+		if(collision.gameObject.name == "rip")
+		{
+			Application.LoadLevel(3);
+		}
+	}
+}
