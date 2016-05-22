@@ -1,0 +1,26 @@
+using UnityEngine;
+using System.Collections;
+// when the object touches the object, go to the next scene 
+public class nextlevel6 : MonoBehaviour 
+{
+	
+	void Start () 
+	{
+		
+	}
+	
+	// Update is called once per frame
+	void Update () 
+	{
+		
+	}
+	
+	void OnCollisionEnter2D (Collision2D collision)
+	{
+		
+		if(collision.gameObject.name == "ladder")
+		{
+			Application.LoadLevel(1);
+		}
+	}
+}
