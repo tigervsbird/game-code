@@ -1,0 +1,35 @@
+using UnityEngine;
+using System.Collections;
+// when the object touch the door, the door with despawn and a open door will spawn
+public class opendoor : MonoBehaviour 
+{
+	public GameObject do2 ;
+	public GameObject d2 ;
+	public GameObject l2 ;
+	public GameObject lv2 ;
+	
+	// Use this for initialization
+	void Start () 
+	{
+		
+	}
+	
+	// Update is called once per frame
+	void Update () 
+	{
+		
+	}
+	
+	void OnCollisionEnter2D (Collision2D collision)
+	{
+		Debug.Log ("I collided, breh!");
+		
+		if(collision.gameObject.name == "l")
+		{
+			do2.SetActive(true);
+			d2.SetActive(false);
+			l2.SetActive(false);
+			lv2.SetActive(true);
+		}
+	}
+}
