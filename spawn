@@ -1,0 +1,31 @@
+using UnityEngine;
+using System.Collections;
+// when the object touch the wall a ball will spawn at a certain area
+public class ballstothewalls : MonoBehaviour 
+{
+	public GameObject ball ;
+	public Vector3 ballspawn ;
+	
+	// Use this for initialization
+	void Start () 
+	{
+		ballspawn = new Vector3 (0.29f, 5.09f, 0f);
+		}
+	
+	// Update is called once per frame
+	void Update () 
+	{
+		
+	}
+	
+	void OnCollisionEnter2D (Collision2D collision)
+	{
+		Debug.Log ("stuff is happening");
+		
+		if(collision.gameObject.name == "thatredthing")
+		{
+			Instantiate(ball, ballspawn, Quaternion.identity);
+
+		}
+	}
+}
